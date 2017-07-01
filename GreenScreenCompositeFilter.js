@@ -3,7 +3,8 @@ var fgimg = null;
 var bgimg = null;
 var imgcanvas = null;
 var imgcanvas2 = null;
-var greenthreshold = 240; // alternatively this can be set as the previous example comparing the green with the sum of red and blue pixel values: "pixel.getRed() + pixel.getBlue()"
+var greenthreshold = 240; // alternatively this can be set as the previous example comparing the green 
+			//with the sum of red and blue pixel values: "pixel.getRed() + pixel.getBlue()"
 
 // function to upload the foreground image
 function fgImg() {
@@ -21,7 +22,8 @@ function bgImg() {
   bgimg.drawTo(imgcanvas);
 }
 
-// function to check for two image files, and make a composite of the two based on greenthreshold value. Draws the composite image to the canvas.
+// function to check for two image files, and make a composite of the two based on greenthreshold value. 
+//Draws the composite image to the canvas.
 function makeComposite() {
   // checking foreground image field is populated
   if (fgimg == null || ! fgimg.complete()){
@@ -46,7 +48,9 @@ function makeComposite() {
   var ctxt2 = imgcanvas2.getContext("2d");
   ctxt2.clearRect(0,0,bgimg.getWidth(),bgimg.getHeight());
   
-  // iterating through each pixel of the foreground image to check its RGB Green value and see if it's above the threshold. If it's above the threshold value, then set the foreground pixel's value to the equivalent pixel of the background image. If not above the threshold value, then just leave the pixel as it is.
+	// iterating through each pixel of the foreground image to check its RGB Green value and see if it's above the threshold. 
+	//If it's above the threshold value, then set the foreground pixel's value to the equivalent pixel of the background image. 
+	//If not above the threshold value, then just leave the pixel as it is.
 	for (var pixel of fgimg.values()) {
       var x = pixel.getX();
       var y = pixel.getY();
