@@ -1,0 +1,25 @@
+/* Setting the CSS layout for the Green Screen composite image filter. */
+
+h3 {
+  font-family: Calibri;
+  font-size: 20px;
+  color: blue;
+}
+
+#can {
+  height: 200px;
+  border: 1px solid lightgray;
+}
+
+#can2 {
+  height: 200px;
+  border: 1px solid lightgray;
+}
+
+/* setting the location of the second image-file upload button. Its position is relative so it won't move with window size.*/
+#bgimage {
+  position: relative;
+  left: 150px;
+  font-family: Calibri;
+}
+
